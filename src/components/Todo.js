@@ -30,13 +30,13 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
         {todo.text}
       </div>
       <div className="icons">
-        <DeleteIcon
-          onClick={() => removeTodo(todo.id)}
-          className="delete-icon"
-        />
         <EditIcon
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
           className="edit-icon"
+        />
+        <DeleteIcon
+          onClick={() => removeTodo(todo.id)}
+          className="delete-icon"
         />
       </div>
     </div>
